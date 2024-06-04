@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    font-weight: normal;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: #0C0C0C;
+    color: #DDE6ED;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.container{
+    padding: 40px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav > h2{
+    font-size: 50px;
+
+    border-radius: 15px;
+}
+
+
+nav > ul > li {
+    display: inline-block;
+    padding: 5px 20px
+}
+
+nav > ul > li > a{
+    color: #F5F7F8;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+}
+
+nav > ul > li > a:hover::after{
+    width: 100%;
+    transition: 0.4s ease;
+}
+
+nav > ul > li > a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position : absolute;
+    left: 0;
+    bottom: -4px;
+
+}
+
+
+/* header text */
+
+.grid-container{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+   
+}
+
+.header-text{
+    margin-top: 20%;
+    word-spacing:4px;
+}
+
+.header-text > p{
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 1.5rem;
+}
+
+.header-text > h2{
+   font-size: 3rem;
+
+}
+
+.header-text > h2 >  span{
+    color : #FA7070;
+}
+
+/*hamburger */
+.ham.fas, .cross.fas{
+    display: none;
+}
+/* -------------------------------- ABOUT -------------------------------> */
+
+#about{
+    padding: 50px 0;
+    height: 100vh;
+}
+
+.container > .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row > .about-col-1 > img{
+    height: 40rem;
+    border-radius: 30px;
+}
+
+.row > .about-col-1{
+    flex-basis: 35%;
+}
+
+.row > .about-col-2{
+    
+    flex-basis: 65%;
+}
+
+.row > .about-col-2 > h1{
+    font-size: 60px;
+    padding-left: 23rem;
+    position: relative;
+    color: #FA7070;
+    padding-bottom: 50px;
+}
+
+.row > .about-col-2 > p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+}
+
+.row > .about-col-2 > .req{
+    font-size: 2rem;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.req{
+    height: 200px;
+}
+
+.row > .about-col-2 > .req > .btn{
+  margin:25px;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #FA7070;
+    border: none;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 560;
+    outline: none;
+    cursor: pointer;
+
+}
+.row > .about-col-2 > .req > .btn > a{
+    text-decoration: none;
+    color: #151515;
+}
+
+
+.row > .about-col-2 > .req > .btn:hover{
+opacity:0.8;
+}
+
+
+/*<--------------------contact--------------------------->*/
+
+#contact{
+   
+    padding: 80px 0;
+}
+
+#contact > .container {
+    height: 100vh;
+    display : flex;
+    justify-content: space-around;
+}
+
+.contact-deet{
+    flex-basis: 35%;
+}
+
+.contact-deet > h1{
+    color:#FA7070;
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+.contact-deet > h1::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background: #FA7070;
+    transform: translate(-5px);
+}
+
+.contact-deet > h1:hover::after{
+    width: 70%;
+    transition: 0.5s ease;
+}
+
+.contact-deet > p{
+    font-size: 25px;
+    margin-bottom: 2.5rem;
+}
+
+
+/*----------contact form---------------->*/
+
+.contact-form{
+    display:flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    gap: 30px;
+}
+
+
+.contact-form > input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    border: none; 
+    font-size: 15px;
+    text-align:left;
+    
+}
+.contact-form > input::placeholder{
+    color: #607274;
+}
+
+.contact-form > input:focus{
+    border: 3px solid #FA7070;
+}
+
+ .contact-form > .msg{
+    height: 140px;
+    padding-bottom: 200px; 
+}
+
+
+.contact-form > button{
+    width: 50%;
+    height: 50px;
+    border-radius : 12px;
+    background-color: #FA7070;
+    color: #151515;
+    font-size: 15px;
+    border: none;
+    font-weight: 500;       
+    background: linear-gradient(250deg,#FA7070,#ff004f); 
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+
+.contact-form > button:hover{
+    opacity: 0.8;
+ 
+}
+
+
+.greet{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #C7C8CC;
+    text-shadow: #151515;
+    visibility: hidden;
+}
+
+/*making website responsive for laptop screen*/
+
+@media only screen and (min-width: 992px) {
+    #about{
+        padding-bottom: 100px;
+        height: 100vh;
+    }
+
+    .row > .about-col-1 > img{
+        height: 35rem;
+        border-radius: 30px;
+    }
+
+    .row > .about-col-2 > h1{
+        font-size: 60px;
+        padding-left: 17rem;
+        position: relative;
+        color: #FA7070;
+        padding-bottom: 50px;
+    }
+
+   #contact{
+    height: 100vh;
+     padding-top: 25px;
+   }
+
+   .contact-deet > h1:hover::after{
+    width: 88%;
+    transition: 0.5s ease;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*making website responsive for android*/
+
+@media only screen and (max-width: 600px){
+     
+    /*header section*/
+
+    #header{
+        height: 80vh;
+    }
+
+    #header > .container{
+        height: 100%;
+        display : flex;
+        flex-direction: column;  
+    }
+
+    #header > .container > nav>  h2{
+        font-size:30px;
+       text-align: left;
+       font-weight: 500;
+    }
+
+
+    .header-text{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-content: center;
+       margin-top: 100px;
+    
+    }
+
+    .header-text > p{
+        margin-top: 30px;
+        line-height: 2.5rem;
+    }
+
+    .cross.fas, .ham.fas{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+    nav > ul{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -200px;
+         background-color:#FA7070;
+        width: 200px;
+        height: 100vh;
+        padding-top: 60px; 
+        z-index: 2;
+        transition: right 0.6s;
+    }
+
+    nav > ul > i{
+        position : absolute;
+        right: 160px;
+        top: 22px;
+    }
+
+    nav > ul > li{
+        margin-top: 25px;
+    }
+
+    
+
+
+
+
+
+    /*---------------about-------------------*/
+
+    #about {
+        padding: 50px 0;
+    }
+
+   #about > .container{
+    display: block;
+    width: 100%;
+    height: 50vh;
+   }
+
+   .row{
+    width: 100%;
+   
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+   }
+
+    .row > .about-col-1{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;  
+    }
+
+   .row > .about-col-1 > img{
+    height: 20rem;
+    max-width: max-content;
+    margin-left: 25%;
+   }
+    
+ 
+
+
+
+   .row > .about-col-2{
+    margin-top:0px;
+    width: 100%;
+    height: 80%;
+   }
+
+   .row >  .about-col-2 > h1{
+    padding-left: 20%;
+    font-size: 40px;
+    padding-top: 50px;
+    font-weight: 500;
+   }
+
+ 
+   .row > .about-col-2 > p{
+    margin-top: 10px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 30px;
+   }
+
+   
+   .row > .about-col-2 > .req{
+    height: 100px;
+    margin: 20px;
+   }
+
+   .row > .about-col-2 > .req > p{
+    font-size: 15px;
+   }
+
+  
+
+   
+
+
+
+   /* contact */
+
+#contact{
+    margin-top: 250px;
+    margin-bottom:70px;
+ 
+}
+
+#contact > .container{
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.container > .contact-deet > h1{
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.container > .contact-deet> p{
+    font-size: 15px;
+}
+
+.contact-form > input{
+    padding: 20px;
+}
+
+
+
+   
+    
+}
+
+
+
+
+
